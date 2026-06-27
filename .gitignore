@@ -1,0 +1,74 @@
+# ============================================================
+# PORTABLE AI OS - .gitignore
+# ============================================================
+
+# ── API Keys & Secrets ──────────────────────────────────────
+*.env
+.env
+.env.*
+config/prod/secrets.json
+config/dev/api_keys.json
+**/application-secret.properties
+
+# ── Java / Spring Boot ──────────────────────────────────────
+backend/target/
+backend/*.class
+backend/**/*.class
+backend/.mvn/wrapper/maven-wrapper.jar
+backend/.gradle/
+backend/build/
+*.jar
+*.war
+
+# ── Python ──────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+python_services/.venv/
+python_services/venv/
+python_services/env/
+*.egg-info/
+dist/
+*.egg
+
+# ── Node / Frontend ─────────────────────────────────────────
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.cache/
+*.log
+npm-debug.log*
+
+# ── ML Models (large binaries – download separately) ────────
+models/whisper/*.bin
+models/spacy/*.npz
+models/tts/*.pth
+models/embeddings/*.bin
+models/embeddings/*.index
+
+# ── Data (personal/sensitive) ───────────────────────────────
+data/calendar/*.db
+data/tasks/*.db
+data/documents/*
+data/conversation_logs/*.jsonl
+data/cache/*
+!data/**/.gitkeep
+
+# ── Logs ────────────────────────────────────────────────────
+logs/*.log
+logs/*.txt
+
+# ── OS / IDE ────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/settings.json
+*.iml
+*.suo
+*.user
+
+# ── Faiss indices ───────────────────────────────────────────
+data/embeddings/*.faiss
+data/embeddings/*.pkl
