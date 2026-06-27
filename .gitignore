@@ -3,9 +3,9 @@
 # ============================================================
 
 # ── API Keys & Secrets ──────────────────────────────────────
-*.env
 .env
 .env.*
+!.env.example
 config/prod/secrets.json
 config/dev/api_keys.json
 **/application-secret.properties
